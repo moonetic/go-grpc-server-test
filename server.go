@@ -6,7 +6,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"moonetic.com/grpc-server-test/message"
+	"github.com/moonetic/grpc-proto-test"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 		log.Fatalf("Failed to listen on port 9000: %v", err)
 	}
 
-	s := message.Server{}
+	s := Server{}
 
 	grpcServer := grpc.NewServer()
 
