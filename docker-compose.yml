@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  app:
+    container_name: server_app
+    build: .
+    ports:
+      - "9000:9000"
+    restart: on-failure
+    networks:
+      - grpc
+
+networks:
+  grpc:
+    name: grpc_test
