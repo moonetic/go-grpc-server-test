@@ -7,6 +7,7 @@ import (
 )
 
 type Server struct {
+	message.MessageServiceServer
 }
 
 func (s *Server) SendMessage(ctx context.Context, messageToSend *message.Message) (*message.Message, error) {
